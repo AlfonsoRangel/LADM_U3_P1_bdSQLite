@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/grisLigero"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/transparente"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="12dp">
+
+            <!-- VER LISTA DE AUTOS -->
+            <LinearLayout
+                android:id="@+id/itemVerVehiculos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/rojoLigero"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icono_carro"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="14dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Catalogo de Vehiculos"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:background="@color/rojoOscuro"
+                    android:textColor="@color/rojoLigero"
+                    android:gravity="center"
+                    android:paddingVertical="8dp"
+                    android:paddingHorizontal="5dp"/>
+            </LinearLayout>
+
+            <!-- VER LISTA DE CLIENTES -->
+            <LinearLayout
+                android:id="@+id/itemVerClientes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/rojoLigero"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icono_clientes"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="14dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Catalogo de Clientes"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:background="@color/rojoOscuro"
+                    android:textColor="@color/rojoLigero"
+                    android:gravity="center"
+                    android:paddingVertical="8dp"
+                    android:paddingHorizontal="5dp"/>
+            </LinearLayout>
+
+            <!-- REGISTRAR RENTA DE VEHICULOS -->
+            <LinearLayout
+                android:id="@+id/itemRegistrarRenta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/rojoLigero"
+                android:layout_marginBottom="8dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icono_registrar_renta"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="14dp"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Registrar Nueva Renta"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:background="@color/rojoOscuro"
+                    android:textColor="@color/rojoLigero"
+                    android:gravity="center"
+                    android:paddingVertical="8dp"
+                    android:paddingHorizontal="5dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

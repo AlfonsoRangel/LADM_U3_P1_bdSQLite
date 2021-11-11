@@ -1,0 +1,400 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/grisLigero"
+    tools:context=".PantallaRegistrarRenta">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparente">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/transparente" >
+
+            <!-- HEADER -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/rojoOscuro" >
+
+                <!-- BOTON REGRESAR -->
+                <ImageView
+                    android:id="@+id/botonRegresar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/icono_regresar"
+                    app:tint="@color/rojoLigero"
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="8dp"/>
+
+                <!-- TITULO -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:layout_gravity="center_vertical"
+                    android:text="Nueva Renta de Vehiculo"
+                    android:textSize="19dp"
+                    android:textStyle="bold"
+                    android:textColor="@color/rojoLigero"
+                    android:gravity="center"
+                    android:paddingVertical="7dp"
+                    android:paddingHorizontal="2dp"
+                    android:ellipsize="end"
+                    android:maxLines="1" />
+
+                <!-- BOTON DESCARGAR -->
+                <ImageView
+                    android:id="@+id/botonDescargar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/icono_descargar"
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginLeft="8dp"/>
+
+            </LinearLayout>
+
+            <!-- MENU DE BOTONES -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp">
+
+                <!-- CIRCULO 1 -->
+                <ImageView
+                    android:id="@+id/botonPanelVehiculo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="5dp"
+                    app:tint="@color/verdeNormal"
+                    android:src="@drawable/icono_circulo"/>
+
+                <!-- CIRCULO 2 -->
+                <ImageView
+                    android:id="@+id/botonPanelCliente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="6dp"
+                    app:tint="@color/rojoOscuro"
+                    android:src="@drawable/icono_circulo"/>
+
+                <!-- CIRCULO 3 -->
+                <ImageView
+                    android:id="@+id/botonPanelDetalles"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="6dp"
+                    app:tint="@color/rojoOscuro"
+                    android:src="@drawable/icono_circulo"/>
+
+            </LinearLayout>
+
+            <!-- CONTENEDOR VEHICULO -->
+            <LinearLayout
+                android:id="@+id/contenedorVehiculo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/transparente"
+                android:layout_marginTop="13dp"
+                android:layout_marginBottom="10dp"
+                android:paddingHorizontal="4dp">
+
+                <!-- BUSCAR POR MARCA O MODELO -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="15dp">
+
+                    <ImageView
+                        android:id="@+id/ayuda_campoBuscarV"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icono_ayuda"
+                        app:tint="@color/rojoOscuro"
+                        android:layout_marginRight="10dp" />
+
+                    <EditText
+                        android:id="@+id/campoBuscarV"
+                        android:inputType="textMultiLine"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:hint="Marca o Modelo"
+                        android:textSize="19sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textColor="@color/rojoOscuro"
+                        android:layout_gravity="center_vertical" />
+
+                    <!-- BOTON BUSCAR  -->
+                    <ImageView
+                        android:id="@+id/botonBuscarV"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icono_buscar"
+                        app:tint="@color/rojoOscuro"
+                        android:layout_marginLeft="10dp" />
+
+                </LinearLayout>
+
+                <!-- CONTENEDOR RESULTADO DE VEHICULOS -->
+                <LinearLayout
+                    android:id="@+id/contenedorRVehiculos"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/transparente"
+                    android:layout_marginVertical="4dp"
+                    android:paddingHorizontal="4dp" >
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- CONTENEDOR CLIENTE -->
+            <LinearLayout
+                android:id="@+id/contenedorCliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/transparente"
+                android:layout_marginTop="13dp"
+                android:layout_marginBottom="10dp"
+                android:paddingHorizontal="4dp">
+
+                <!-- BUSCAR POR NOMBRE O APELLIDO -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="15dp">
+
+                    <ImageView
+                        android:id="@+id/ayuda_campoBuscarC"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icono_ayuda"
+                        app:tint="@color/rojoOscuro"
+                        android:layout_marginRight="10dp" />
+
+                    <EditText
+                        android:id="@+id/campoBuscarC"
+                        android:inputType="textMultiLine"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:hint="Nombre o Apellido"
+                        android:textSize="19sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textColor="@color/rojoOscuro"
+                        android:layout_gravity="center_vertical" />
+
+                    <!-- BOTON BUSCAR  -->
+                    <ImageView
+                        android:id="@+id/botonBuscarC"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icono_buscar"
+                        app:tint="@color/rojoOscuro"
+                        android:layout_marginLeft="10dp" />
+
+                </LinearLayout>
+
+                <!-- CONTENEDOR RESULTADO DE CLIENTES -->
+                <LinearLayout
+                    android:id="@+id/contenedorRClientes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/transparente"
+                    android:layout_marginVertical="4dp"
+                    android:paddingHorizontal="4dp" >
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- CONTENEDOR DETALLES -->
+            <LinearLayout
+                android:id="@+id/contenedorDetalles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/transparente"
+                android:layout_marginVertical="10dp"
+                android:paddingHorizontal="4dp">
+
+                <!-- FECHA DE ENTREGA  -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp">
+
+                    <ImageView
+                        android:id="@+id/botonFechaEntrega"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icono_calendario"
+                        android:paddingHorizontal="4dp" />
+
+                    <TextView
+                        android:id="@+id/txtFechaEntrega"
+                        android:inputType="textMultiLine"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:textSize="19sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textColor="@color/rojoOscuro"
+                        android:background="@color/rojoLigero"
+                        android:paddingVertical="6dp"
+                        android:paddingHorizontal="4dp"
+                        android:layout_gravity="center_vertical" />
+
+                    <ImageView
+                        android:id="@+id/ayuda_txtFechaEntrega"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icono_ayuda"
+                        app:tint="@color/rojoOscuro"
+                        android:layout_marginLeft="10dp" />
+
+                </LinearLayout>
+
+                <!-- FECHA DE DEVOLUCION  -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp">
+
+                    <ImageView
+                        android:id="@+id/botonFechaDevolucion"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icono_calendario"
+                        android:paddingHorizontal="4dp" />
+
+                    <TextView
+                        android:id="@+id/txtFechaDevolucion"
+                        android:inputType="textMultiLine"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:textSize="19sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textColor="@color/rojoOscuro"
+                        android:background="@color/rojoLigero"
+                        android:paddingVertical="6dp"
+                        android:paddingHorizontal="4dp"
+                        android:layout_gravity="center_vertical" />
+
+                    <ImageView
+                        android:id="@+id/ayuda_txtFechaDevolucion"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icono_ayuda"
+                        app:tint="@color/rojoOscuro"
+                        android:layout_marginLeft="10dp" />
+
+                </LinearLayout>
+
+                <!-- COSTO TOTAL  -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp">
+
+                    <ImageView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icono_dinero"
+                        android:paddingHorizontal="4dp" />
+
+                    <TextView
+                        android:id="@+id/txtCosto"
+                        android:inputType="textMultiLine"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:textSize="19sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textColor="@color/rojoOscuro"
+                        android:background="@color/rojoLigero"
+                        android:paddingVertical="6dp"
+                        android:paddingHorizontal="4dp"
+                        android:layout_gravity="center_vertical" />
+
+                    <ImageView
+                        android:id="@+id/ayuda_txtCosto"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icono_ayuda"
+                        app:tint="@color/rojoOscuro"
+                        android:layout_marginLeft="10dp" />
+
+                </LinearLayout>
+
+                <!-- BOTON REGISTRAR  -->
+                <LinearLayout
+                        android:id="@+id/botonRegistrar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@color/rojoOscuro"
+                        android:paddingHorizontal="10dp"
+                        android:paddingVertical="8dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginHorizontal="5dp"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Registrar Renta"
+                            android:textSize="23dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/rojoLigero" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/grisLigero"
+    tools:context=".PantallaCliente">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparente">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/transparente" >
+
+            <!-- HEADER -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/rojoOscuro" >
+
+                <!-- BOTON REGRESAR -->
+                <ImageView
+                    android:id="@+id/botonRegresar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/icono_regresar"
+                    app:tint="@color/rojoLigero"
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="8dp"/>
+
+                <!-- TITULO -->
+                <TextView
+                    android:id="@+id/txtTitulo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:layout_gravity="center_vertical"
+                    android:text="Nuevo Cliente"
+                    android:textSize="21sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/rojoLigero"
+                    android:gravity="center"
+                    android:paddingVertical="6dp"
+                    android:paddingHorizontal="2dp" />
+
+                <!-- BOTON DESCARGAR -->
+                <ImageView
+                    android:id="@+id/botonDescargar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/icono_descargar"
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginLeft="8dp"/>
+
+            </LinearLayout>
+
+            <!-- CONTENEDOR MAIN  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/transparente"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="25dp"
+                android:paddingHorizontal="5dp">
+
+                <!-- NOMBRE  -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp">
+
+                    <EditText
+                        android:id="@+id/campoNombre"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:hint="Nombre Completo"
+                        android:textSize="19sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textColor="@color/rojoOscuro"
+                        android:layout_gravity="center_vertical"/>
+
+                    <ImageView
+                        android:id="@+id/ayuda_campoNombre"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icono_ayuda"
+                        app:tint="@color/rojoOscuro"
+                        android:layout_marginLeft="8dp" />
+
+                </LinearLayout>
+
+                <!-- NUMERO DE LICENCIA  -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp">
+
+                    <EditText
+                        android:id="@+id/campoNoLicencia"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:hint="Numero de Licencia"
+                        android:textSize="19sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textColor="@color/rojoOscuro"
+                        android:layout_gravity="center_vertical"/>
+
+                    <ImageView
+                        android:id="@+id/ayuda_campoNoLicencia"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icono_ayuda"
+                        app:tint="@color/rojoOscuro"
+                        android:layout_marginLeft="8dp" />
+
+                </LinearLayout>
+
+                <!-- TELEFONO  -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp">
+
+                    <EditText
+                        android:id="@+id/campoTelefono"
+                        android:inputType="number"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:hint="Telefono"
+                        android:textSize="19sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textColor="@color/rojoOscuro"
+                        android:layout_gravity="center_vertical"/>
+
+                    <ImageView
+                        android:id="@+id/ayuda_campoTel"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icono_ayuda"
+                        app:tint="@color/rojoOscuro"
+                        android:layout_marginLeft="8dp" />
+
+                </LinearLayout>
+
+
+
+                <!--==========================================
+                             BOTONES
+                ==========================================-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center">
+
+                    <!-- BOTON AGREGAR -->
+                    <LinearLayout
+                        android:id="@+id/botonAgregar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@color/rojoOscuro"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="7dp"
+                        android:layout_marginHorizontal="4dp"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Agregar"
+                            android:textSize="23dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/rojoLigero" />
+                    </LinearLayout>
+
+                    <!-- BOTON GUARDAR CAMBIOS -->
+                    <LinearLayout
+                        android:id="@+id/botonGuardar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@color/rojoOscuro"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="7dp"
+                        android:layout_marginHorizontal="4dp"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Guardar Cambios"
+                            android:textSize="23dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/rojoLigero" />
+                    </LinearLayout>
+
+                    <!-- BOTON ELIMINAR -->
+                    <LinearLayout
+                        android:id="@+id/botonEliminar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@color/rojoOscuro"
+                        android:paddingHorizontal="8dp"
+                        android:paddingVertical="7dp"
+                        android:layout_marginHorizontal="4dp"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Eliminar"
+                            android:textSize="23dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/rojoLigero" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <!-- CONTENEDOR DE VEHICULOS RENTADOS -->
+            <LinearLayout
+                android:id="@+id/contenedorVehiculos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/transparente"
+                android:layout_marginVertical="10dp"
+                android:paddingHorizontal="4dp" >
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

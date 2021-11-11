@@ -1,0 +1,347 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/grisLigero"
+    tools:context=".PantallaVehiculo">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/transparente">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="@color/transparente" >
+
+            <!-- HEADER -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/rojoOscuro" >
+
+                <!-- BOTON REGRESAR -->
+                <ImageView
+                    android:id="@+id/botonRegresar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/icono_regresar"
+                    app:tint="@color/rojoLigero"
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginRight="8dp"/>
+
+                <!-- TITULO -->
+                <TextView
+                    android:id="@+id/txtTitulo"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="2"
+                    android:layout_gravity="center_vertical"
+                    android:text="Nuevo Vehiculo"
+                    android:textSize="21sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/rojoLigero"
+                    android:gravity="center"
+                    android:paddingVertical="6dp"
+                    android:paddingHorizontal="2dp" />
+
+                <!-- BOTON DESCARGAR -->
+                <ImageView
+                    android:id="@+id/botonDescargar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/icono_descargar"
+                    android:layout_marginVertical="4dp"
+                    android:layout_marginLeft="8dp"/>
+
+            </LinearLayout>
+
+            <!-- CONTENEDOR MAIN  -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/transparente"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="10dp"
+                android:paddingHorizontal="4dp">
+
+                <!-- PLACA  -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="10dp">
+
+                    <EditText
+                        android:id="@+id/campoPlaca"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:hint="Placa"
+                        android:textSize="19sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textColor="@color/rojoOscuro"
+                        android:layout_gravity="center_vertical"/>
+
+                    <ImageView
+                        android:id="@+id/ayuda_campoPlaca"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icono_ayuda"
+                        app:tint="@color/rojoOscuro"
+                        android:layout_marginLeft="8dp" />
+
+                </LinearLayout>
+
+                <!-- MODELO  -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="12dp">
+
+                    <EditText
+                        android:id="@+id/campoModelo"
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="2"
+                        android:hint="Modelo"
+                        android:textSize="19sp"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textColor="@color/rojoOscuro"
+                        android:layout_gravity="center_vertical"/>
+
+                    <ImageView
+                        android:id="@+id/ayuda_campoModelo"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icono_ayuda"
+                        app:tint="@color/rojoOscuro"
+                        android:layout_marginLeft="8dp" />
+
+                </LinearLayout>
+
+
+                <!--==========================================
+                             MARCA
+                ==========================================-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="15dp">
+
+                        <Spinner
+                            android:id="@+id/comboMarca"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical" />
+
+                    <ImageView
+                        android:id="@+id/ayuda_comboMarca"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icono_ayuda"
+                        app:tint="@color/rojoOscuro"
+                        android:layout_marginLeft="8dp" />
+
+                </LinearLayout>
+
+
+                <!--==========================================
+                             AÑO
+                ==========================================-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="15dp">
+
+                        <Spinner
+                            android:id="@+id/comboAnio"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical" />
+
+                    <ImageView
+                        android:id="@+id/ayuda_comboAnio"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icono_ayuda"
+                        app:tint="@color/rojoOscuro"
+                        android:layout_marginLeft="8dp" />
+
+                </LinearLayout>
+
+
+                <!--==========================================
+                             TIPO
+                ==========================================-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="15dp">
+
+                        <Spinner
+                            android:id="@+id/comboTipo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"/>
+
+                    <ImageView
+                        android:id="@+id/ayuda_comboTipo"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icono_ayuda"
+                        app:tint="@color/rojoOscuro"
+                        android:layout_marginLeft="8dp" />
+
+                </LinearLayout>
+
+
+                <!--==========================================
+                             COSTO X DIA
+                ==========================================-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="30dp">
+
+                        <EditText
+                            android:id="@+id/campoCosto"
+                            android:inputType="numberDecimal"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:hint="Costo por Dia"
+                            android:textSize="19sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:textColor="@color/rojoOscuro"
+                            android:layout_gravity="center_vertical"/>
+
+                    <ImageView
+                        android:id="@+id/ayuda_campoCosto"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icono_ayuda"
+                        app:tint="@color/rojoOscuro"
+                        android:layout_marginLeft="8dp" />
+
+                </LinearLayout>
+
+
+                <!--==========================================
+                             BOTONES
+                ==========================================-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center">
+
+                    <!-- BOTON AGREGAR -->
+                    <LinearLayout
+                        android:id="@+id/botonAgregar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@color/rojoOscuro"
+                        android:paddingHorizontal="6dp"
+                        android:paddingVertical="7dp"
+                        android:layout_marginHorizontal="3dp"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Agregar"
+                            android:textSize="23dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/rojoLigero" />
+                    </LinearLayout>
+
+                    <!-- BOTON GUARDAR CAMBIOS -->
+                    <LinearLayout
+                        android:id="@+id/botonGuardar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@color/rojoOscuro"
+                        android:paddingHorizontal="6dp"
+                        android:paddingVertical="7dp"
+                        android:layout_marginHorizontal="3dp"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Guardar Cambios"
+                            android:textSize="23dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/rojoLigero" />
+                    </LinearLayout>
+
+                    <!-- BOTON ELIMINAR -->
+                    <LinearLayout
+                        android:id="@+id/botonEliminar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:background="@color/rojoOscuro"
+                        android:paddingHorizontal="6dp"
+                        android:paddingVertical="7dp"
+                        android:layout_marginHorizontal="3dp"
+                        android:layout_gravity="center">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Eliminar"
+                            android:textSize="23dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/rojoLigero" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+            <!-- CONTENEDOR CLIENTE -->
+            <LinearLayout
+                android:id="@+id/contenedorCliente"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/transparente"
+                android:layout_marginVertical="4dp"
+                android:paddingHorizontal="4dp" >
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>

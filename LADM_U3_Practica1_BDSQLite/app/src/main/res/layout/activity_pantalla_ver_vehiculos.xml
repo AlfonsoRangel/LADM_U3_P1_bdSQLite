@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/grisLigero"
+        tools:context=".PantallaVerVehiculos">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparente">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:background="@color/transparente" >
+
+                <!-- HEADER -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:background="@color/rojoOscuro" >
+
+                    <!-- BOTON REGRESAR -->
+                    <ImageView
+                        android:id="@+id/botonRegresar"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/icono_regresar"
+                        app:tint="@color/rojoLigero"
+                        android:layout_marginVertical="4dp"
+                        android:layout_marginLeft="4dp"
+                        android:layout_marginRight="6dp"/>
+
+                    <!-- TITULO -->
+                    <TextView
+                        android:id="@+id/txtTitulo"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="6"
+                        android:layout_gravity="center_vertical"
+                        android:text="Catalogo de Vehiculos super vehiculos fffxdxd"
+                        android:textSize="19dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/rojoLigero"
+                        android:gravity="center"
+                        android:paddingVertical="7dp"
+                        android:paddingHorizontal="2dp"
+                        android:ellipsize="end"
+                        android:maxLines="1" />
+
+                    <!-- ICONOS -->
+                    <HorizontalScrollView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="4"
+                        android:layout_gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="5dp">
+
+                            <!-- BOTON FILTRO -->
+                            <ImageView
+                                android:id="@+id/botonFiltrar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/icono_filtrar"
+                                android:layout_marginVertical="4dp"
+                                android:layout_marginRight="8dp"/>
+
+                            <!-- BOTON DESCARGAR -->
+                            <ImageView
+                                android:id="@+id/botonDescargar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/icono_descargar"
+                                android:layout_marginVertical="4dp"
+                                android:layout_marginRight="8dp"/>
+
+                            <!-- BOTON NUEVO CAR -->
+                            <ImageView
+                                android:id="@+id/botonAgregar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/icono_agregar"
+                                android:layout_marginVertical="4dp"
+                                android:layout_marginRight="8dp"/>
+
+                        </LinearLayout>
+
+                    </HorizontalScrollView>
+
+                </LinearLayout>
+
+                <!-- CONTENEDOR FILTRO  -->
+                <LinearLayout
+                    android:id="@+id/contenedorFiltro"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/transparente"
+                    android:layout_marginVertical="10dp"
+                    android:paddingHorizontal="4dp">
+
+                    <!-- BUSCAR POR MARCA O MODELO  -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginBottom="10dp">
+
+                        <ImageView
+                            android:id="@+id/ayuda_campoBuscar"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/icono_ayuda"
+                            app:tint="@color/rojoOscuro"
+                            android:layout_marginRight="10dp" />
+
+                        <EditText
+                            android:id="@+id/campoBuscar"
+                            android:inputType="textMultiLine"
+                            android:layout_width="1dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="2"
+                            android:hint="Marca o Modelo"
+                            android:textSize="19sp"
+                            android:textStyle="bold"
+                            android:gravity="center"
+                            android:textColor="@color/rojoOscuro"
+                            android:layout_gravity="center_vertical" />
+
+                        <!-- BOTON BUSCAR  -->
+                        <ImageView
+                            android:id="@+id/botonBuscar"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/icono_buscar"
+                            app:tint="@color/rojoOscuro"
+                            android:layout_marginLeft="10dp" />
+
+                    </LinearLayout>
+
+
+                    <!--==========================================
+                                 AÑOS DE USO DEL VEHICULO
+                    ==========================================-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="8dp">
+
+                    <LinearLayout
+                        android:layout_width="1dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_weight="2">
+
+                        <!-- DESDE CUANTOS AÑOS DE USO -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center">
+
+                            <ImageView
+                                android:id="@+id/ayuda_comboAnioI"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/icono_ayuda"
+                                app:tint="@color/rojoOscuro"
+                                android:layout_marginRight="8dp" />
+
+                            <Spinner
+                                android:id="@+id/comboAnioInicial"
+                                android:layout_width="1dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="2" />
+
+                        </LinearLayout>
+
+                        <!-- HASTA CUANTAS AÑOS DE USO -->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="15dp">
+
+                            <ImageView
+                                android:id="@+id/ayuda_comboAnioF"
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:layout_gravity="center_vertical"
+                                android:src="@drawable/icono_ayuda"
+                                app:tint="@color/rojoOscuro"
+                                android:layout_marginRight="8dp" />
+
+                            <Spinner
+                                android:id="@+id/comboAnioFinal"
+                                android:layout_width="1dp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:layout_weight="2" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                        <!-- BOTON BUSCAR  -->
+                        <ImageView
+                            android:id="@+id/botonBuscarPorAnios"
+                            android:layout_width="50dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@drawable/icono_buscar"
+                            app:tint="@color/rojoOscuro"
+                            android:layout_marginLeft="10dp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <!-- CONTENEDOR RESULTADO  -->
+                <LinearLayout
+                android:id="@+id/contenedorResultado"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/transparente"
+                android:layout_marginVertical="4dp"
+                android:paddingHorizontal="4dp" >
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+</LinearLayout>
